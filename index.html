@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Luckiest Guy"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <div class="center_section">
+        <label class="heading"
+          >Type your name and get a Avatar for you :)</label
+        >
+        <div>
+          <input type="text" placeholder="Enter Your Name" id="nameid" />
+          <p class="welcome_heading">Welcome</p>
+          <img
+            src="https://www.kindpng.com/picc/m/712-7124986_dinosaur-sticker-child-clip-art-dinosaur-clipart-dinosaur.png"
+            alt="image"
+            class="imgchange"
+          />
+        </div>
+
+        <button>Click Me</button>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          const name = $("#nameid").val();
+          alert(name);
+
+          $(".imgchange").attr("src", "https://joeschmoe.io/api/v1/${name}");
+          //I'm changing the image soursce from the API and we use attribute and the source where I've to change and the path from where I've to change
+          //$(".imgchange").attr("source", "path");
+        });
+      });
+    </script>
+  </body>
+</html>
